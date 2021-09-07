@@ -31,6 +31,8 @@ text/troff; /usr/bin/man -X100 -l '%s'; test=test -n "$DISPLAY" -a -e /usr/bin/g
 application/x-troff-man; /usr/bin/man -l '%s'; needsterminal; description=Man page
 text/troff; /usr/bin/man -l '%s'; needsterminal; description=Man page
 text/html; /usr/bin/sensible-browser %s; description=HTML Text; nametemplate=%s.html
+text/html; /usr/bin/firefox-esr %s; description=HTML Text; test=test -n "$DISPLAY";  nametemplate=%s.html
+text/xml; /usr/bin/firefox-esr %s; description=XML Text; test=test -n "$DISPLAY";  nametemplate=%s.xml
 application/x-troff-man; /usr/bin/nroff -mandoc -Tutf8; copiousoutput; print=/usr/bin/nroff -mandoc -Tutf8 | print text/plain:-
 text/troff; /usr/bin/nroff -mandoc -Tutf8; copiousoutput; print=/usr/bin/nroff -mandoc -Tutf8 | print text/plain:-
 text/plain; more %s; needsterminal
@@ -57,8 +59,13 @@ application/x-shellscript; vim %s; needsterminal
 text/x-c; vim %s; needsterminal
 text/x-c++; vim %s; needsterminal
 text/plain; view %s; edit=vim %s; compose=vim %s; test=test -x /usr/bin/vim; needsterminal
+text/html; /usr/bin/lynx -force_html %s; needsterminal; description=HTML Text; nametemplate=%s.html
 application/zip; unzip -l %s; nametemplate=%s.zip; copiousoutput
 text/plain; view %s; edit=vi %s; compose=vi %s; needsterminal
+image/png;  /usr/bin/firefox-esr %s; description=PNG Image; test=test -n "$DISPLAY";  nametemplate=%s.png
+image/jpeg;  /usr/bin/firefox-esr %s; description=JPEG Image; test=test -n "$DISPLAY";  nametemplate=%s.jpeg
+image/gif;  /usr/bin/firefox-esr %s; description=GIF Image; test=test -n "$DISPLAY";  nametemplate=%s.gif
+text/html; /usr/bin/lynx -dump -force_html %s; copiousoutput; description=HTML Text; nametemplate=%s.html
 application/x-troff-man; /usr/bin/man -Tascii -l '%s' | col -b; copiousoutput; description=Man page
 text/troff; /usr/bin/man -Tascii -l '%s' | col -b; copiousoutput; description=Man page
 text/*; less '%s'; needsterminal

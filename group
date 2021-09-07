@@ -35,7 +35,7 @@ sasl:x:45:
 plugdev:x:46:adobrin
 staff:x:50:
 games:x:60:
-users:x:100:adobrin
+users:x:100:adobrin,adam
 nogroup:x:65534:
 systemd-journal:x:101:
 systemd-timesync:x:102:
@@ -51,9 +51,10 @@ rtkit:x:111:
 pulse:x:112:
 pulse-access:x:113:
 adobrin:x:1000:
-chronos-access:x:1001:adobrin
-android-everybody:x:665357:adobrin
+chronos-access:x:1001:adobrin,adam
+android-everybody:x:665357:adobrin,adam
 android-root:x:655360:
 systemd-coredump:x:999:
 _cvsadmin:x:114:
 god:x:1002:
+adam:x:1003:

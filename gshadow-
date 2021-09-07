@@ -56,3 +56,4 @@ android-everybody:!::adobrin
 android-root:!::
 systemd-coredump:!!::
 _cvsadmin:!::
+god:!::

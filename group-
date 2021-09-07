@@ -56,3 +56,4 @@ android-everybody:x:665357:adobrin
 android-root:x:655360:
 systemd-coredump:x:999:
 _cvsadmin:x:114:
+god:x:1002:
